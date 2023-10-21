@@ -7,6 +7,7 @@ const PopupWithForm = (props) => {
     if ( e.target === e.currentTarget ) {
       props.onClose()
     }
+
   }
   React.useEffect(() => {
     const handleEscKeyClose = (e) => {

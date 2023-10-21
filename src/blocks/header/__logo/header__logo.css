@@ -1,6 +1,7 @@
 .header__logo {
     color: #fff;
     margin-bottom: 41px;
+    margin-top: 45px;
   }
 
   @media screen and (max-width: 1040px) {
@@ -17,3 +18,8 @@
     }
   }
 
+  @media screen and (max-width: 500px) {
+    .header__logo {
+      margin-top: 28px;
+    }
+  }

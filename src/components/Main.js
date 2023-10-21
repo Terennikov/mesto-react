@@ -41,12 +41,13 @@ const Main = (props) => {
 
         <div className="profile__info">
           <h1 className="profile__name">{ currentUser && currentUser.name }</h1>
-          <button onClick={ props.onEditProfile } type="button"
-                  className="profile__edit-button profile__edit-button-link"></button>
           <p className="profile__about">{ currentUser && currentUser.about }</p>
         </div>
-
-        <button onClick={ props.onAddPlace } type="button" className="profile__add-button"></button>
+        
+        <button onClick={ props.onEditProfile } type="button"
+                  className="profile__edit-button profile__edit-button-link"></button>
+        <button onClick={ props.onAddPlace } type="button" 
+                  className="profile__add-button"></button>
 
       </section>
 
