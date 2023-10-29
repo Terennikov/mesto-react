@@ -42,7 +42,6 @@ export class Api {
     }
   
     updateUser ({ name, about }) {
-      
       return fetch(`${ this._url }${ this._groupId }/users/me`, {
         method: "PATCH",
         headers: this._headers,
@@ -60,6 +59,16 @@ export class Api {
       }).then(this._getResponse)
     }
   
+    async changeLikeCard (card, isLiked) {
+      const method = isLiked ? "PUT" : "DELETE"
+      return fetch(`${ this._url }${ this._groupId }/cards/${ card }/likes`,
+        {
+          method: method,
+          headers: this._headers
+        }
+      ).then(this._getResponse)
+    }
+
     likeCard (card) {
       return fetch(`${ this._url }${ this._groupId }/cards/${ card }/likes`, {
         method: "PUT",
