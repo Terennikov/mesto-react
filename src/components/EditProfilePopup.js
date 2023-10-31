@@ -40,24 +40,29 @@ const EditProfilePopup = (props) => {
       name="edit"
       buttonText={"Сохранить"}
       onSubmit={ handleSubmit }
+  
     >
       <FormInput
         placeholder="Имя"
         required="required"
         type="text"
         name="name"
+        
         minLength="2"
         maxLength="40"
         onChange={ handleNameChange }
+        value={name}
       />
       <FormInput
         placeholder="Занятие"
         required="required"
         type="text"
         name="about"
+        
         minLength="2"
         maxLength="200"
         onChange={ handleAboutChange }
+        value={description}
       />
     </PopupWithForm>
   )
