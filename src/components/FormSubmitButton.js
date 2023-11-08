@@ -1,4 +1,4 @@
-const FormSubmitButton = (props) => {
+const FormSubmitButton = props => {
 
     return (
       <button type="submit" className="popup__submit-button">

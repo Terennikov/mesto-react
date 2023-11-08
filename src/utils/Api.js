@@ -30,6 +30,12 @@ export class Api {
       }).then(res => this._getResponse(res))
     }
   
+    getLogin () {
+      return fetch(`https://auth.nomoreparties.co/${this._groupId}/users/me`, {
+        headers: this._headers,
+      }).then(res => this._getResponse(res))
+    }
+
     createCard ({ name, link }) {
       return fetch(`${ this._url }${ this._groupId }/cards`, {
         method: "POST",

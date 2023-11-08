@@ -19,13 +19,12 @@ const EditProfilePopup = (props) => {
     setName(name)
   }
 
-  const handleAboutChange = (description) => {
+  const handleAboutChange = description => {
     setDescription(description)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, description)
     props.onUpdateUser({
       name,
       about: description
@@ -40,14 +39,12 @@ const EditProfilePopup = (props) => {
       name="edit"
       buttonText={"Сохранить"}
       onSubmit={ handleSubmit }
-  
     >
       <FormInput
         placeholder="Имя"
         required="required"
         type="text"
         name="name"
-        
         minLength="2"
         maxLength="40"
         onChange={ handleNameChange }
@@ -58,7 +55,6 @@ const EditProfilePopup = (props) => {
         required="required"
         type="text"
         name="about"
-        
         minLength="2"
         maxLength="200"
         onChange={ handleAboutChange }

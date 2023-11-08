@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react"
 
 const FormInput = forwardRef(({ onChange, ...rest }, ref) => {
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     onChange(e.target.value)
   }
   

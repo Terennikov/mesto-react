@@ -14,7 +14,6 @@ const EditAvatarPopup = (props) => {
     props.onUpdateUser({
       avatar: avatarRef.current.value
     })
-    console.log(avatarRef.current.value)
   }
 
   return (
@@ -32,8 +31,7 @@ const EditAvatarPopup = (props) => {
         placeholder="Ссылка на картинку"
         required="required"
         ref={ avatarRef }
-        onChange={ () => {
-        } }
+        onChange={ () => {}}
       />
     </PopupWithForm>
   )

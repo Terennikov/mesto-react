@@ -4,10 +4,8 @@ import { useContext } from "react"
 const Card = (props) => {
   const currentUser = useContext(CurrentUserContext)
   const isOwn = props.card.owner._id === currentUser.id
-  const isLiked = props.card.likes.some((i) => i._id === currentUser.id)
-  const cardLikeButtonClassName = (
-    `elements__like-button ${ isLiked && "elements__like-button_activ" }`
-  )
+  const isLiked = props.card.likes.some(i => i._id === currentUser.id)
+  const cardLikeButtonClassName = `elements__like-button ${ isLiked && "elements__like-button_activ" }`
 
   function handleClick() {
     props.onCardClick(props.card)
