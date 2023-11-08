@@ -25,7 +25,7 @@ const App = () => {
   const handleAddPlaceClick = () => setIsAddPlacePopupOpen(true)
   const handleEditProfileClick = () => setIsEditProfilePopupOpen(true)
   const handleEditAvatarClick = () => setIsEditAvatarPopupOpen(true)
-  const handleCardClick = (card) => setSelectedCard(card)
+  const handleCardClick = card => setSelectedCard(card)
   const [ cards, setCards ] = React.useState([])
   
   const [isInfoTooltip, setIsInfoTooltip] = React.useState(false)
