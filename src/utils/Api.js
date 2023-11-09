@@ -72,7 +72,7 @@ export class Api {
           method: method,
           headers: this._headers
         }
-      ).then(this._getResponse)
+        ).then(this._getResponse)
     }
 
     likeCard (card) {

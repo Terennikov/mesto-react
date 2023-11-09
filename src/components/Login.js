@@ -3,11 +3,10 @@ import Header from './Header'
 import { useEffect, useState } from 'react'
 import Auth from './Auth'
 import { Navigate } from 'react-router-dom'
-
 const Login = props => {
 	const [formValue, setFormValue] = useState({
-	  email: '',
-	  password: '',
+		email: '',
+		password: '',
 	})
 	const endpointRegister = '/signin'
 
@@ -33,7 +32,7 @@ const Login = props => {
 	}, [])
 
 	const checkValidityUser = token => {
-		const BASE_URL = 'https://auth.nomoreparties.co/'
+		const BASE_URL = 'https://auth.nomoreparties.co'
 		return fetch(`${BASE_URL}/users/me`, {
 			method: 'GET',
 			headers: {
@@ -64,6 +63,7 @@ const Login = props => {
 				console.error(error)
 			})
 	}
+
 
 	return (
 		<>

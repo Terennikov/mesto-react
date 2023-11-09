@@ -13,9 +13,9 @@ const FormInput = forwardRef(({ onChange, ...rest }, ref) => {
         className={ `popup__input popup__input_type_${ rest.name }` }
         { ...rest }
       />
-      <span className={ `popup__error ${ rest.name }-error` }></span>
+      <span className={ `popup__error ${rest.name}-error` }></span>
     </>
   )
 })
   
-  export default FormInput
+export default FormInput

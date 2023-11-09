@@ -21,7 +21,7 @@ const Card = (props) => {
 
   return (
     <>
-    { isOwn && <button type="button" onClick={handleDeleteClick} className="elements__delete-button"/> }
+    {isOwn && (<button type="button" onClick={handleDeleteClick} className="elements__delete-button"/> )}
       <img
         onClick={ handleClick }
         src={ props.card.link }

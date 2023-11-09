@@ -17,7 +17,6 @@ const Main = props => {
 				currentEmail={props.currentEmail}
 			/>
     <main className="main">
-
       <section className="profile">
         <div className="profile__avatar-container">
           <button onClick={ props.onEditAvatar } className="profile__avatar-edit"></button>
